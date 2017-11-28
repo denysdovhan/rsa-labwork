@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "name": "rsa",
+  "version": "1.0.0",
+  "description": "A javascript RSA algorithim encryption tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Denys Dovhan <email@denysdovhan.com> (http://denysdovhan.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "big-integer": "^1.6.26"
+  }
+}
