@@ -1,4 +1,4 @@
-const RSA = require('./rsa');
+const RSA = require('.');
 
 // Message
 const message = 'Hello, World!';

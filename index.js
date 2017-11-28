@@ -1,7 +1,7 @@
 const bigInt = require('big-integer');
 
 class RSA {
-  static random_prime(bits) {
+  static randomPrime(bits) {
     const min = bigInt.one.shiftLeft(bits - 1);
     const max = bigInt.one.shiftLeft(bits).prev();
     
@@ -20,8 +20,8 @@ class RSA {
     let totient;
   
     do {
-      p = this.random_prime(keysize / 2);
-      q = this.random_prime(keysize / 2);
+      p = this.randomPrime(keysize / 2);
+      q = this.randomPrime(keysize / 2);
       totient = bigInt.lcm(
         p.prev(),
         q.prev()
@@ -35,12 +35,12 @@ class RSA {
     };
   }
 
-  static encrypt(encoded_msg, n, e) {
-    return bigInt(encoded_msg).modPow(e, n);
+  static encrypt(encodedMsg, n, e) {
+    return bigInt(encodedMsg).modPow(e, n);
   }
 
-  static decrypt(encrypted_msg, d, n) {
-    return bigInt(encrypted_msg).modPow(d, n); 
+  static decrypt(encryptedMsg, d, n) {
+    return bigInt(encryptedMsg).modPow(d, n); 
   }
 
   static encode(str) {
